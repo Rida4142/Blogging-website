@@ -1,0 +1,99 @@
+.col-md-6 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.blog-card {
+    background-color: #fff;
+    color: black;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    text-align: left;
+    width: 800px; 
+    height: 250px; 
+    margin-left: 20px;
+    display: flex;
+    align-items: center; 
+}
+
+.blog-card .pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-right: 20px; /* Adds some space between image and content */
+    overflow: hidden;
+}
+
+.blog-card .pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.blog-card .blog-item {
+    flex: 1; /* Make the content take the remaining space */
+}
+
+.blog-card .blog-item h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: teal;
+    margin-bottom: 10px;
+}
+
+.blog-card .blog-item p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #484646;
+    font-weight: 800;
+}
+
+.blog-card .blog-item p .poster1 {
+    margin-left: 20px;
+    color: olive;
+}
+
+.blog-card .blog-item p .poster2 {
+    margin-left: 16px;
+    color: olive;
+}
+
+.blog-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.like-button-container, .comment-button-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.like-button, .comment-button {
+    background-color: white;
+    border: 2px solid olive;
+    border-radius: 5px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    cursor: not-allowed; /* Disables clicking */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px; /* Adds space between button and number */
+}
+
+.material-icons {
+    font-size: 24px;
+    color: olive;
+}
+
+.like-count, .comment-count {
+    font-size: 16px;
+    color: olive;
+    margin-left: 5px; /* Adds space between button and number */
+}
+

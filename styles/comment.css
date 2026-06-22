@@ -1,0 +1,21 @@
+.reply-btn {
+    background-color: olive;
+    display: block;
+    color: White;
+    padding: 5px 10px;
+    font-family: 'DynaPuff',serif;
+    border-radius: 30px;
+    margin: 10px 0 10px 10px;   
+}
+
+.reply-div {
+    background-color: whitesmoke;
+    width: 100%;
+}
+
+.reply-input-container textarea {
+    padding: 20px;
+    margin-left: 50px;
+    font-family: 'Ubuntu',sans-serif;
+    font-size: 14px;
+}

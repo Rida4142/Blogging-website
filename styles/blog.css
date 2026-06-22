@@ -1,0 +1,282 @@
+.blog-card,html {
+    line-height: 1.6;
+    font-size: 1.2rem;
+}
+
+.navbar {
+    background-color: black;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    height: 120px;
+    box-sizing: border-box;
+}
+
+.navbar h1 {
+    font-family: 'DynaPuff', sans-serif;
+    font-weight: bold;
+    font-size: 2.5rem;
+    color: white;
+    margin: 0;
+}
+
+.navbar h1 a {
+    text-decoration: none;
+    color: white;
+}
+
+.pages ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: 20px;  
+}
+
+.pages li {
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.pages a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    background-color: transparent;
+}
+
+.pages a:last-child {
+    margin-right: 20px;
+}
+
+.pages a:hover {
+    background-color: white;
+    color: black;
+}
+
+.blog-page {
+    display: flex;
+    align-items: flex-start;
+    width: 1200px;
+    justify-content: flex-start;
+    margin-top: 140px;
+    padding: 0 20px;
+}
+
+
+.blog-card {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    text-align: left;
+    width: 100%;
+    max-width: 1300px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 60px;
+    margin-top: 20px; 
+    border: 2px solid black;
+}
+
+.blog-card h3 {
+    font-size: 2.6rem;
+    font-weight: bold;
+    color: teal;
+    margin-bottom: 0px;
+}
+
+.blog-card h1,h2 {
+    color: black;
+    margin: 20px 0;
+}
+
+.blog-card strong {
+    color: teal;
+}
+
+.blog-card p {
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    margin-bottom: 20px;
+}
+
+.blog-card .content {
+    color: #333;
+}
+
+.blog-card em {
+    color: gray;
+}
+
+.blog-card blockquote {
+    font-style: italic;
+    border-left: 4px solid #ccc;
+    padding-left: 20px;
+    margin: 20px 0;
+    font-size: 1.1rem;
+    color: #555;
+    background-color: #f9f9f9;
+    padding-right: 20px;
+}
+
+.blog-card blockquote p {
+    margin: 0;
+}
+
+.blog-card .ql-align-center {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.blog-card .ql-align-right {
+    text-align: right;
+    margin: 20px 0;
+}
+
+.blog-card ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #333;
+}
+
+.blog-card ul li {
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+
+.blog-card ul.custom-bullet {
+    list-style-type: square;
+}
+
+.blog-card ol {
+    padding-left: 20px;
+    color: #333;
+}
+
+.blog-card ol li {
+    font-weight: normal;
+}
+
+.blog-card ol.custom-number {
+    list-style-type: decimal;
+    counter-reset: custom-counter;
+}
+
+.blog-card ol.custom-number li {
+    counter-increment: custom-counter;
+}
+
+.blog-card ol.custom-number li::before {
+    content: counter(custom-counter) ". ";
+    color: teal;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.blog-header {
+    margin-bottom: 20px;
+}
+
+.blog-card h4 {
+    color: olive;
+    font-size: 1.4rem;
+    margin: 30px 0;
+}
+
+.thumbs-up-button {
+    border-radius: 20px;
+    border: 2px solid #ccc;
+    background-color: transparent;
+    padding: 20px 18px;
+    margin: 10px;
+    margin-right: 20px;
+    cursor: pointer;
+    color: transparent;
+    display: flex;
+    align-items: center;
+    width: calc(18px + 30px + 18px);
+}
+
+.thumbs-up-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(43, 230, 247, 0.2);
+}
+
+.material-icons {
+    font-size: 24px; 
+    color: olive;
+    vertical-align: middle; 
+}
+
+.blog-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.blog-header p {
+    margin-left: 18px;
+}
+
+
+.ql-code-block-container {   
+    padding: 10px;             
+    background-color: #1e1e1e;
+    border-radius: 4px;        
+    margin: 10px 0;            
+    overflow-x: auto;         
+    border: 1px solid #ccc;  
+}
+
+.ql-code-block-container .ql-code-block {
+    font-family: 'Space Mono', monospace; 
+    color: #dcdcdc;           
+    white-space: pre-wrap;   
+    word-wrap: break-word;   
+         
+}
+.card {
+    justify-items: start;
+}
+
+.col-auto img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+
+.goback-btn {
+    justify-items: end;
+    border-radius: 20px;
+    border: 2px solid #ccc;
+    background-color: transparent;
+    padding: 20px 18px;
+    margin: 10px;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 18px;
+    color: #333;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+  }
+
+.col-auto {
+    margin-right: 20px;
+}

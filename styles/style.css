@@ -1,0 +1,443 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    background: radial-gradient(circle at top left, rgba(59, 130, 246, 0.16), transparent 24%),
+                radial-gradient(circle at bottom right, rgba(14, 165, 233, 0.12), transparent 20%),
+                linear-gradient(135deg, #0f172a 0%, #111827 46%, #1f2937 100%);
+    color: #e5e7eb;
+    min-height: 100vh;
+    padding: 140px 0 120px;
+    background-attachment: fixed;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: url('/assets/starslol.jpg') center/cover no-repeat;
+    opacity: 0.18;
+    pointer-events: none;
+    z-index: -1;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(circle at center, rgba(59, 130, 246, 0.04), transparent 40%);
+    pointer-events: none;
+    z-index: -1;
+}
+
+.main-div,
+.maindiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar {
+    background: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(14px);
+    padding: 20px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 0 0 18px 18px;
+}
+
+.navbar h1 {
+    font-family: 'DynaPuff', sans-serif;
+    font-weight: bold;
+    font-size: 2.5rem;
+    color: white;
+    margin-right: auto;
+}
+
+.navbar h1 a {
+    text-decoration: none;
+    color: white;
+}
+
+.pages ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.pages li {
+    margin: 0 15px;
+}
+
+.pages a {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #f8fafc;
+    font-size: 1.2rem;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+    padding: 10px 20px;
+    border-radius: 999px;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s ease;
+    background: rgba(56, 189, 248, 0.12);
+    border: 1px solid rgba(56, 189, 248, 0.45);
+    white-space: nowrap;
+}
+
+.pages a:hover {
+    background: rgba(56, 189, 248, 0.24);
+    color: #ffffff;
+    border-color: rgba(56, 189, 248, 0.75);
+    transform: translateY(-1px);
+}
+
+.py-5 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.col-md-6 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 18px;
+    margin-top: 120px;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-card {
+    background: rgba(15, 23, 42, 0.96);
+    color: #e5e7eb;
+    padding: 42px;
+    border-radius: 28px;
+    box-shadow: 0 32px 90px rgba(15, 23, 42, 0.32);
+    text-align: center;
+    width: min(100%, 1080px);
+    max-width: 1080px;
+    margin: 24px auto;
+    border: 1px solid rgba(148, 163, 184, 0.18);
+    margin-bottom: 42px;
+    overflow-wrap: anywhere;
+}
+
+.login-card h2 {
+    font-family: 'DynaPuff', sans-serif;
+    font-size: 2.4rem;
+    margin-bottom: 12px;
+    color: #f8fafc;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group input {
+    font-family: 'DynaPuff', sans-serif;
+    padding: 14px 16px;
+    font-size: 1.05rem;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid rgba(148, 163, 184, 0.24);
+    border-radius: 14px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.08);
+    color: #e5e7eb;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.form-group input::placeholder {
+    color: rgba(226, 232, 240, 0.7);
+}
+
+.form-group input:focus {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(56, 189, 248, 0.65);
+    box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.08);
+}
+
+.btn-std {
+    font-family: 'DynaPuff', sans-serif;
+    color: #f8fafc;
+    border-color: transparent;
+    background: linear-gradient(135deg, #38bdf8 0%, #0ea5e9 48%, #2563eb 100%);
+    border-radius: 14px;
+    font-size: 1.15rem;
+    padding: 14px 24px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+    box-shadow: 0 18px 40px rgba(56, 189, 248, 0.32);
+}
+
+button:hover,
+.btn-std:hover {
+    transform: translateY(-1px);
+    opacity: 0.95;
+}
+
+.login-card a {
+    color: teal;
+}
+
+.login-card a:hover {
+    color: white;
+}
+
+.social-media-icons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #fff;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.icon:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.1);
+}
+
+.soc-img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+footer {
+    background: rgba(15, 23, 42, 0.97);
+    color: #cbd5e1;
+    text-align: center;
+    padding: 22px 0;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    font-family: 'DynaPuff', sans-serif;
+    border-top: 1px solid rgba(148, 163, 184, 0.16);
+}
+
+footer h3 {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 14px;
+}
+
+.icon {
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(148, 163, 184, 0.14);
+}
+
+.icon:hover {
+    background-color: rgba(56, 189, 248, 0.16);
+}
+
+.verification-resend {
+    margin-top: 15px;
+}
+
+.verification-resend a {
+    color: teal;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.verification-resend a:hover {
+    text-decoration: underline;
+}
+
+.profile-card {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.profile-pic {
+    width: 120px; 
+    height: 120px;
+    border-radius: 50%;
+    margin-right: 120px;
+    overflow: hidden;
+}
+
+
+.profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-details h3 {
+    font-size: 1.2rem;
+    margin: 5px 0;
+}
+
+.profile-details span {
+    color: teal;
+    margin-left: 40px;
+}
+
+.profile-details .s1 {
+    margin-left: 73px;
+}
+
+.profile-details .s2 {
+    margin-left: 85px;
+}
+
+.profile-details .s3 {
+    margin-left: 87px;
+}
+
+.profile-details .s4 {
+    margin-left: 78px;
+}
+
+.profile-details .s5 {
+    margin-left: 70px;
+}
+
+.card-body {
+    padding: 20px;
+    text-align: left;
+}
+
+.alert {
+    margin-bottom: 20px;
+}
+
+.card-header {
+    background-color: white;
+    color: black;
+}
+
+.login-card h5 {
+    font-family: 'DynaPuff', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.profile-card-small {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    white-space: nowrap;
+}
+
+.profile-pic-small {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid white;
+}
+
+.profile-pic-small img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-name {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.faq-card {
+    background-color: #fff;
+    color: black;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    border: 2px solid rgba(0, 0, 0, 0.12);
+    margin-bottom: 40px;
+}
+
+.faq-card h2 {
+    font-family: 'DynaPuff', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.faq-card .faq-item {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.faq-card .faq-item h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: teal;
+    margin-bottom: 10px;
+}
+
+.faq-card .faq-item p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+footer a{
+    color: green;
+}
+
+.preview-box {
+    width: 100px;
+    height: 100px;
+    background-color: #ccc;  /* Initial background color */
+    border-radius: 8px; /* Optional: Makes the corners slightly rounded */
+    display: inline-block; /* To make sure the box aligns properly */
+    margin-top: 10px;
+}
