@@ -1,8 +1,101 @@
-# Blogging Website (BlogsNet)
+# Blogging Web App
 
-## Overview
+A full-featured blogging platform with user authentication, content management, social interaction, and admin controls — built with a relational MySQL database and a PHP backend.
 
-This is a PHP blogging website with user authentication, blog posting, comments, categories, FAQ, and an admin panel.
+---
+
+## Features
+
+**Users**
+- Register and log in securely
+- Create, edit, and delete blog posts
+- Comment on and like other users' posts
+- View personal post history and activity
+
+**Admin**
+- Full admin dashboard with logging
+- Monitor user activity and content
+- Manage posts and user accounts
+
+**General**
+- Clean, responsive UI
+- Secure session management
+- Relational database design with proper normalization
+
+---
+
+## Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Frontend | HTML, CSS, JavaScript |
+| Backend | PHP |
+| Database | MySQL |
+| Version Control | Git, GitHub |
+
+---
+
+## Database Design
+
+The database is designed around four core entities:
+
+- **Users** — stores credentials and profile data
+- **Posts** — stores blog content linked to authors
+- **Comments** — linked to both posts and users
+- **Activity Logs** — tracks admin-relevant user actions
+
+Relationships are enforced through foreign keys with proper indexing for query performance.
+
+---
+
+## Getting Started
+
+### Prerequisites
+
+- PHP 7.4 or above
+- MySQL 5.7 or above
+- Apache or NGINX (XAMPP or WAMP works fine locally)
+
+### Installation
+
+1. Clone the repository
+
+```bash
+git clone https://github.com/Rida4142/blogging-web-app.git
+```
+
+2. Move the project into your server's root directory (e.g. `htdocs` for XAMPP)
+
+3. Import the database
+
+- Open phpMyAdmin
+- Create a new database called `blogging_app`
+- Import the `database.sql` file from the `/db` folder
+
+4. Configure the database connection
+
+Open `config/db.php` and update:
+
+```php
+$host = 'localhost';
+$db   = 'blogging_app';
+$user = 'root';
+$pass = '';
+```
+
+5. Start Apache and MySQL
+
+```
+http://localhost/blogging-web-app
+```
+
+---
+
+
+
+
+
+
 
 ## Project Structure
 
@@ -77,17 +170,29 @@ This is a PHP blogging website with user authentication, blog posting, comments,
   - `post.css`
   - `style.css`
 - `vendor/` - Composer dependencies and autoload files.
+  ---
 
-### Configuration
+## Screenshots
 
-- `composer.json` - PHP dependency configuration.
-- `composer.lock` - Locked Composer package versions.
-- `package.json` - Node package metadata (if used for tooling).
-- `package-lock.json` - Locked npm package versions.
+<img width="1917" height="911" alt="image" src="https://github.com/user-attachments/assets/112dc4fc-cce0-4726-b32e-bcbb078ad2b3" />
+<img width="1917" height="897" alt="image" src="https://github.com/user-attachments/assets/6d38c3cd-64c8-4cb9-a8fa-7913c96f1f7f" />
+<img width="1890" height="907" alt="image" src="https://github.com/user-attachments/assets/65843a6d-b22e-44d9-848e-7a84ee7a35c0" />
+<img width="1917" height="897" alt="image" src="https://github.com/user-attachments/assets/f66df645-740d-418a-8e80-e3dd1c568d56" />
 
-### Database
 
-- `blol(2).sql` - SQL dump for creating the blog database schema and sample data.
+---
+
+## Built By
+
+**Rida Waheed**
+---
+**Daud Shafi**
+---
+**Ahmed Raza**
+---
+Software Engineering Students at NUST Islamabad  
+
+
 
 ## Notes 
 
@@ -97,9 +202,3 @@ This is a PHP blogging website with user authentication, blog posting, comments,
 - Admin management pages are separate from public pages and use dedicated handlers for CRUD actions.
 - Static styling and scripts are organized under `styles/` and `js/`.
 
-## How to Run
-
-1. Configure a local PHP server or use XAMPP/WAMP.
-2. Import `blol(2).sql` into MySQL.
-3. Update database credentials in `conn.php`.
-4. Open `index.php` in your browser.
